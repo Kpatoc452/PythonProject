@@ -12,7 +12,6 @@
 [![JavaScript](https://img.shields.io/badge/-JavaScript-464646?style=flat-square&logo=JavaScript)]()
 [![HTML5](https://img.shields.io/badge/-HTML5-464646?style=flat-square&logo=HTML5)]()
 [![CSS](https://img.shields.io/badge/-css-464646?style=flat-square&logo=css)]()
-[![Node.js](https://img.shields.io/badge/-Node.js-464646?style=flat-square&logo=Node.js)](https://nodejs.org/en)
 [![CatBoost](https://img.shields.io/badge/-CatBoost-464646?style=flat-square&logo=CatBoost)](https://catboost.ai/)
 [![Poetry](https://img.shields.io/badge/-Poetry-464646?style=flat-square&logo=Poetry)](https://python-poetry.org/)
 
