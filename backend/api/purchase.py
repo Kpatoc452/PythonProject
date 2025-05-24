@@ -1,9 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
-from typing import Optional
+from typing import Optional, List
 
 from api.Dependencies.fastapi_users_object import current_active_user
 from core.schemas.product import ProductUpdate
+from core.schemas.purchase import PurchaseRead
 from core.models.db_helper import db_helper
 from core.models.user import User
 from core.models import Product
@@ -56,3 +57,11 @@ async def create_purchase(
             detail="Ошибка при работе с бд, покупка не завершена",
         )
     return new_purchase
+
+@router.get('/me', response_model=List[PurchaseRead])
+async def get_my_purchases(
+    session: AsyncSession = Depends(db_helper.session_getter),
+    user: User = Depends(current_active_user)
+):
+    purchases: Optional[list[Product]] = await PurchaseCRUD.get_all_objects(session, user_id=user.id)
+    return purchases
