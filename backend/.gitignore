@@ -161,3 +161,4 @@ cython_debug/
 .idea/
 /pgdata/
 /minio_data/
+/certs
